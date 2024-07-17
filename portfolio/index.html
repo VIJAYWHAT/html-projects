@@ -21,11 +21,21 @@
             margin: 0;
             color: #00ff00;
         }
+        header p {
+            margin: 10px 0;
+        }
         section {
             padding: 20px;
         }
         h2 {
             color: #00ff00;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
         }
         .projects, .contact-info {
             display: flex;
@@ -37,6 +47,10 @@
             margin: 10px 0;
             border-radius: 5px;
         }
+        .project img, .contact-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
         a {
             color: #00ff00;
             text-decoration: none;
@@ -44,12 +58,21 @@
         a:hover {
             text-decoration: underline;
         }
+        footer {
+            background-color: #1a1a1a;
+            padding: 10px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Vijay Raja</h1>
         <p>Self-learning Developer | BSc Computer Science at SRMV, Coimbatore</p>
+        <img src="path/to/your/profile-picture.jpg" alt="Vijay Raja" class="profile-pic">
     </header>
     <section>
         <h2>About Me</h2>
@@ -75,15 +98,18 @@
         <div class="projects">
             <div class="project">
                 <h3>Banking Application in C</h3>
-                <p>A robust banking application developed in C for handling various banking operations.</p>
+                <img src="path/to/banking-application-image.jpg" alt="Banking Application">
+                <p>A robust banking application developed in C for handling various banking operations. This project demonstrates my ability to work with low-level programming languages to create efficient and secure applications.</p>
             </div>
             <div class="project">
                 <h3>SJSON Parser</h3>
-                <p>A parser for SJSON (Simple JSON) format, written to efficiently process and handle JSON data.</p>
+                <img src="path/to/sjson-parser-image.jpg" alt="SJSON Parser">
+                <p>A parser for SJSON (Simple JSON) format, written to efficiently process and handle JSON data. This project showcases my skills in data processing and understanding of JSON formats.</p>
             </div>
             <div class="project">
                 <h3>Ecommerce Website</h3>
-                <p>An ecommerce platform designed to provide a seamless online shopping experience.</p>
+                <img src="path/to/ecommerce-website-image.jpg" alt="Ecommerce Website">
+                <p>An ecommerce platform designed to provide a seamless online shopping experience. This project highlights my web development skills and my ability to integrate various technologies to build full-featured applications.</p>
             </div>
         </div>
     </section>
@@ -101,5 +127,8 @@
             </div>
         </div>
     </section>
+    <footer>
+        <p>&copy; 2024 Vijay Raja. All rights reserved.</p>
+    </footer>
 </body>
 </html>
