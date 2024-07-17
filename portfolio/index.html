@@ -3,145 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijay Raja - Developer Portfolio</title>
+    <title>Vijay Raja's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #f0f0f0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
+        }
+        header, section, footer {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #444;
         }
         header {
-            background-color: #1a1a1a;
-            padding: 20px;
+            background-color: #111;
             text-align: center;
         }
-        header h1 {
+        h1 {
             margin: 0;
-            color: #00ff00;
+            font-size: 2.5em;
         }
-        header p {
-            margin: 10px 0;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #00ff00;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-        }
-        .projects, .contact-info {
-            display: flex;
-            flex-direction: column;
-        }
-        .project, .contact-item {
-            background-color: #1a1a1a;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        .project img, .contact-item img {
+        section img {
             max-width: 100%;
+            height: auto;
+        }
+        .skills {
+            display: flex;
+            overflow-x: auto;
+        }
+        .skill {
+            background-color: #222;
+            border: 1px solid #555;
             border-radius: 5px;
-        }
-        a {
-            color: #00ff00;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #1a1a1a;
+            margin: 5px;
             padding: 10px;
-            text-align: center;
+            flex: 0 0 auto;
         }
-        footer p {
-            margin: 0;
-        }
-        ul.skills {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul.skills li {
-            background-color: #333;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        ul.skills li:hover {
-            background-color: #444;
+        .contact a {
+            color: #00f;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Vijay Raja</h1>
-        <p>Self-learning Developer | BSc Computer Science at SRMV, Coimbatore</p>
-        <img src="https://via.placeholder.com/150" alt="Vijay Raja" class="profile-pic">
+        <p>Self-learning developer, studying BSc Computer Science at SRMV, Coimbatore</p>
     </header>
+
     <section>
         <h2>About Me</h2>
-        <p>I am a backend developer, easily adaptable to any programming language. My expertise includes:</p>
-        <ul class="skills">
-            <li>C</li>
-            <li>C++</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>PHP</li>
-            <li>C#</li>
-            <li>Dart</li>
-            <li>Flutter</li>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>Linux</li>
-            <li>Markdown</li>
-            <li>KaTeX</li>
-        </ul>
+        <p>I am a backend developer, easily adaptable to any programming language.</p>
+        <h3>Languages I Know:</h3>
+        <div class="skills">
+            <div class="skill">C</div>
+            <div class="skill">C++</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">PHP</div>
+            <div class="skill">C#</div>
+            <div class="skill">Dart</div>
+            <div class="skill">Flutter</div>
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Markdown</div>
+            <div class="skill">KaTeX</div>
+        </div>
     </section>
+
     <section>
         <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Banking Application in C</h3>
-                <img src="https://via.placeholder.com/300" alt="Banking Application">
-                <p>A robust banking application developed in C for handling various banking operations. This project demonstrates my ability to work with low-level programming languages to create efficient and secure applications.</p>
-            </div>
-            <div class="project">
-                <h3>SJSON Parser</h3>
-                <img src="https://via.placeholder.com/300" alt="SJSON Parser">
-                <p>A parser for SJSON (Simple JSON) format, written to efficiently process and handle JSON data. This project showcases my skills in data processing and understanding of JSON formats.</p>
-            </div>
-            <div class="project">
-                <h3>Ecommerce Website</h3>
-                <img src="https://via.placeholder.com/300" alt="Ecommerce Website">
-                <p>An ecommerce platform designed to provide a seamless online shopping experience. This project highlights my web development skills and my ability to integrate various technologies to build full-featured applications.</p>
-            </div>
-        </div>
+        <h3>Banking Application in C</h3>
+        <img src="https://images.unsplash.com/photo-1573164574399-dfdbdb84816a" alt="Banking Application">
+        <h3>SJSON Parser</h3>
+        <img src="https://images.unsplash.com/photo-1563287410-ecc90f46a1e9" alt="SJSON Parser">
+        <h3>Ecommerce Website</h3>
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Ecommerce Website">
     </section>
+
     <section>
         <h2>Contact</h2>
-        <div class="contact-info">
-            <div class="contact-item">
-                <p>Email: <a href="mailto:vijay@gmail.com">vijay@gmail.com</a></p>
-            </div>
-            <div class="contact-item">
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/vijay">https://www.linkedin.com/in/vijay</a></p>
-            </div>
-            <div class="contact-item">
-                <p>GitHub: <a href="https://github.com/vijay1">https://github.com/vijay1</a></p>
-            </div>
-        </div>
+        <p>Email: <a href="mailto:vijay@gmail.com">vijay@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vijay" target="_blank">https://www.linkedin.com/in/vijay</a></p>
+        <p>GitHub: <a href="https://github.com/vijay1" target="_blank">https://github.com/vijay1</a></p>
     </section>
+
     <footer>
-        <p>&copy; 2024 Vijay Raja. All rights reserved.</p>
+        <p>&copy; 2024 Vijay Raja</p>
     </footer>
 </body>
 </html>
