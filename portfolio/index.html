@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijay Raja's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         body {
-            background-color: #000;
-            color: #fff;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
@@ -15,10 +17,11 @@
         header, section, footer {
             margin: 20px;
             padding: 20px;
-            border: 1px solid #444;
+            border: 1px solid #333;
+            border-radius: 10px;
         }
         header {
-            background-color: #111;
+            background-color: #1a1a1a;
             text-align: center;
         }
         h1 {
@@ -28,10 +31,13 @@
         section img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
         }
         .skills {
             display: flex;
             overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
         }
         .skill {
             background-color: #222;
@@ -40,9 +46,62 @@
             margin: 5px;
             padding: 10px;
             flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skill img {
+            width: 24px;
+            height: 24px;
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel img {
+            width: 100%;
+        }
+        .carousel .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel .prev, .carousel .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            cursor: pointer;
+        }
+        .carousel .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .carousel .prev {
+            left: 0;
+        }
+        .carousel .prev:hover, .carousel .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        footer {
+            text-align: center;
         }
         .contact a {
-            color: #00f;
+            color: #00ff00;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -57,30 +116,70 @@
         <p>I am a backend developer, easily adaptable to any programming language.</p>
         <h3>Languages I Know:</h3>
         <div class="skills">
-            <div class="skill">C</div>
-            <div class="skill">C++</div>
-            <div class="skill">Java</div>
-            <div class="skill">Python</div>
-            <div class="skill">PHP</div>
-            <div class="skill">C#</div>
-            <div class="skill">Dart</div>
-            <div class="skill">Flutter</div>
-            <div class="skill">HTML5</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Linux</div>
-            <div class="skill">Markdown</div>
-            <div class="skill">KaTeX</div>
+
+            <div class="skill">
+              <i class="fab fa-c"></i> C
+            </div>
+            <div class="skill">
+              <i class="fab fa-cpp"></i> C++
+            </div>
+            <div class="skill">
+              <i class="fab fa-java"></i> Java
+            </div>
+            <div class="skill">
+              <i class="fab fa-python"></i> Python
+            </div>
+            <div class="skill">
+              <i class="fab fa-php"></i> PHP
+            </div>
+            <div class="skill">
+              <i class="fab fa-csharp"></i> C#
+            </div>
+            <div class="skill">
+              <i class="fab fa-dart"></i> Dart
+            </div>
+            <div class="skill">
+              <i class="fab fa-flutter"></i> Flutter
+            </div>
+            <div class="skill">
+              <i class="fab fa-html5"></i> HTML5
+            </div>
+            <div class="skill">
+              <i class="fab fa-css3-alt"></i> CSS
+            </div>
+            <div class="skill">
+              <i class="fab fa-linux"></i> Linux
+            </div>
+            <div class="skill">
+              <i class="fab fa-markdown"></i> Markdown
+            </div>
+            <div class="skill">
+              <i class="fas fa-math"></i> KaTeX
+            </div>
+            
         </div>
     </section>
 
     <section>
         <h2>Projects</h2>
-        <h3>Banking Application in C</h3>
-        <img src="https://images.unsplash.com/photo-1573164574399-dfdbdb84816a" alt="Banking Application">
-        <h3>SJSON Parser</h3>
-        <img src="https://images.unsplash.com/photo-1563287410-ecc90f46a1e9" alt="SJSON Parser">
-        <h3>Ecommerce Website</h3>
-        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Ecommerce Website">
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <h3>Banking Application in C</h3>
+                    <img src="https://images.unsplash.com/photo-1573164574399-dfdbdb84816a" alt="Banking Application">
+                </div>
+                <div class="slide">
+                    <h3>SJSON Parser</h3>
+                    <img src="https://images.unsplash.com/photo-1563287410-ecc90f46a1e9" alt="SJSON Parser">
+                </div>
+                <div class="slide">
+                    <h3>Ecommerce Website</h3>
+                    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Ecommerce Website">
+                </div>
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
     </section>
 
     <section>
@@ -93,5 +192,24 @@
     <footer>
         <p>&copy; 2024 Vijay Raja</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function moveSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+    </script>
 </body>
 </html>
